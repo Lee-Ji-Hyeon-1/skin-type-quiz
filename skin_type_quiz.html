@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>피부 타입 테스트</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; }
+    h1, h2 { text-align: center; }
+    .question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; cursor: pointer; }
+    button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+    .result { margin-top: 30px; font-weight: bold; font-size: 18px; white-space: pre-line; }
+  </style>
+</head>
+<body>
+  <h1>피부 타입 테스트</h1>
+  <form id="quizForm">
+    <div class="question">
+      <h2>1. 아침에 일어났을 때 내 피부 상태는?</h2>
+      <label><input type="radio" name="q1" value="건성" required> 건조하고 당김</label>
+      <label><input type="radio" name="q1" value="지성"> 번들거림</label>
+      <label><input type="radio" name="q1" value="수부지"> T존은 번들, 볼은 건조</label>
+      <label><input type="radio" name="q1" value="중성"> 보통</label>
+      <label><input type="radio" name="q1" value="복합성"> 부위별 차이가 있음</label>
+      <label><input type="radio" name="q1" value="민감성"> 쉽게 붉어짐</label>
+    </div>
+
+    <div class="question">
+      <h2>2. 하루 동안 피부 유분기 변화는?</h2>
+      <label><input type="radio" name="q2" value="건성" required> 거의 없음</label>
+      <label><input type="radio" name="q2" value="지성"> 많이 번들거림</label>
+      <label><input type="radio" name="q2" value="수부지"> 부분적으로 번들</label>
+      <label><input type="radio" name="q2" value="중성"> 보통</label>
+      <label><input type="radio" name="q2" value="복합성"> 부위별 다름</label>
+      <label><input type="radio" name="q2" value="민감성"> 자극 받으면 변함</label>
+    </div>
+
+    <div class="question">
+      <h2>3. 세안 후 피부가 당기는 느낌은?</h2>
+      <label><input type="radio" name="q3" value="건성" required> 심하게 당김</label>
+      <label><input type="radio" name="q3" value="지성"> 거의 없음</label>
+      <label><input type="radio" name="q3" value="수부지"> 일부 당김</label>
+      <label><input type="radio" name="q3" value="중성"> 거의 없음</label>
+      <label><input type="radio" name="q3" value="복합성"> 부위별 다름</label>
+      <label><input type="radio" name="q3" value="민감성"> 자극 시 당김</label>
+    </div>
+
+    <div class="question">
+      <h2>4. 피부 트러블이 자주 나는 편인가요?</h2>
+      <label><input type="radio" name="q4" value="건성" required> 거의 안 남</label>
+      <label><input type="radio" name="q4" value="지성"> 자주 남</label>
+      <label><input type="radio" name="q4" value="수부지"> T존 위주</label>
+      <label><input type="radio" name="q4" value="중성"> 거의 없음</label>
+      <label><input type="radio" name="q4" value="복합성"> 부위별 차이</label>
+      <label><input type="radio" name="q4" value="민감성"> 자극에 민감</label>
+    </div>
+
+    <div class="question">
+      <h2>5. 피부가 자주 붉어지거나 가려운가요?</h2>
+      <label><input type="radio" name="q5" value="건성" required> 거의 없음</label>
+      <label><input type="radio" name="q5" value="지성"> 드물게</label>
+      <label><input type="radio" name="q5" value="수부지"> T존은 없음</label>
+      <label><input type="radio" name="q5" value="중성"> 없음</label>
+      <label><input type="radio" name="q5" value="복합성"> 부위별</label>
+      <label><input type="radio" name="q5" value="민감성"> 자주</label>
+    </div>
+
+    <div class="question">
+      <h2>6. 메이크업 후 피부 상태는?</h2>
+      <label><input type="radio" name="q6" value="건성" required> 건조하고 각질</label>
+      <label><input type="radio" name="q6" value="지성"> 쉽게 번들거림</label>
+      <label><input type="radio" name="q6" value="수부지"> 부분 번들거림</label>
+      <label><input type="radio" name="q6" value="중성"> 보통</label>
+      <label><input type="radio" name="q6" value="복합성"> 부위별 차이</label>
+      <label><input type="radio" name="q6" value="민감성"> 자극받으면 붉어짐</label>
+    </div>
+
+    <div class="question">
+      <h2>7. 피부에 수분감을 느끼는 빈도는?</h2>
+      <label><input type="radio" name="q7" value="건성" required> 거의 못 느낌</label>
+      <label><input type="radio" name="q7" value="지성"> 항상 번들거림</label>
+      <label><input type="radio" name="q7" value="수부지"> 부분적으로 느낌</label>
+      <label><input type="radio" name="q7" value="중성"> 적당히 느낌</label>
+      <label><input type="radio" name="q7" value="복합성"> 부위별 다름</label>
+      <label><input type="radio" name="q7" value="민감성"> 자극 후 느낌</label>
+    </div>
+
+    <div class="question">
+      <h2>8. 평소 사용하는 스킨케어 제품이 맞지 않는 경우는?</h2>
+      <label><input type="radio" name="q8" value="건성" required> 거의 없음</label>
+      <label><input type="radio" name="q8" value="지성"> 여드름, 트러블 유발</label>
+      <label><input type="radio" name="q8" value="수부지"> 부분적으로 맞지 않음</label>
+      <label><input type="radio" name="q8" value="중성"> 거의 없음</label>
+      <label><input type="radio" name="q8" value="복합성"> 부위별 차이</label>
+      <label><input type="radio" name="q8" value="민감성"> 자극 심함</label>
+    </div>
+
+    <button type="submit">결과 보기</button>
+  </form>
+
+  <div class="result" id="result"></div>
+
+  <script>
+    const form = document.getElementById('quizForm');
+    const resultDiv = document.getElementById('result');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+      const scores = { '건성':0, '지성':0, '수부지':0, '중성':0, '복합성':0, '민감성':0 };
+
+      for (let i=1; i<=8; i++) {
+        let val = formData.get('q'+i);
+        if (val && scores.hasOwnProperty(val)) {
+          scores[val]++;
+        }
+      }
+
+      let maxScore = 0;
+      let skinType = '';
+      for (const type in scores) {
+        if (scores[type] > maxScore) {
+          maxScore = scores[type];
+          skinType = type;
+        }
+      }
+
+      const messages = {
+        '지성': '당신의 피부 타입은 지성!\n[보송하게 수분 잠금, 벨벳락코드]',
+        '건성': '당신의 피부 타입은 건성!\n[하루종일 촉촉한 수분 잠금, 글로우락코드]',
+        '중성': '당신의 피부 타입은 중성!\n[균형 잡힌 수분 잠금, 밸런스락코드]',
+        '복합성': '당신의 피부 타입은 복성!\n[맞춤 케어 수분 잠금, 존케어락코드]',
+        '수부지': '당신의 피부 타입은 수부지!\n[속부터 차오르는 수분 잠금, 딥워터락코드]',
+        '민감성': '당신의 피부 타입은 민감!\n[자극 방어 수분 잠금, 카밍락코드]'
+      };
+
+      resultDiv.textContent = messages[skinType] || '모든 질문에 답해주세요!';
+    });
+  </script>
+</body>
+</html>
